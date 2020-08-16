@@ -1,4 +1,4 @@
-<form  [formGroup]="form" (ngSubit)="submit()">
+<form  [formGroup]="form" (ngSubmit)="submit()">
     <h1>Создание нового поста</h1>
 
     <div
@@ -17,6 +17,7 @@
 
     <div class="form-control">
         <label>Контент поста:</label>
+        <quill-editor formControlName="text"></quill-editor>
     </div>
 
     <div

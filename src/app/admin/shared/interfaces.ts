@@ -17,3 +17,6 @@ export interface Post {
     date: Date
 
 }
+export interface FbCreateResponce {
+    name: string
+}
