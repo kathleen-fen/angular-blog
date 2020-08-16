@@ -11,6 +11,8 @@ import {SharedModule} from '../shared/shared.module';
 import {AuthGuard} from './shared/services/auth,guard';
 import { QuillModule } from 'ngx-quill';
 import { SearchPipe } from './shared/search.pipe';
+import { AlertComponent } from './shared/components/alert/alert.component';
+import {AlertService} from './shared/services/alert.service'
 
 
 @NgModule ({
@@ -20,7 +22,8 @@ import { SearchPipe } from './shared/search.pipe';
         DashboardPageComponent,
         CreatePageComponent,
         EditPageComponent,
-        SearchPipe
+        SearchPipe,
+        AlertComponent
     ],
     imports: [
         CommonModule,
@@ -42,7 +45,8 @@ import { SearchPipe } from './shared/search.pipe';
     ],
     exports: [RouterModule],
     providers: [
-        AuthGuard
+        AuthGuard,
+        AlertService
     ]
 })
 
